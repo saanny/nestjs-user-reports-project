@@ -1,0 +1,55 @@
+POST http://localhost:3000/auth/signup
+Content-type: application/json
+
+{
+    "email":"email222@gmail.com",
+    "password":"2425asfagaw2424"
+}
+### Signin
+POST http://localhost:3000/auth/signin
+Content-type: application/json
+
+{
+    "email":"email222@gmail.com",
+    "password":"2425asfagaw2424"
+}
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/2
+
+### Find All user with a given Email
+GET http://localhost:3000/auth?email=email@gmail.com
+
+### Delete One user with id
+DELETE http://localhost:3000/auth/6
+
+
+### Update One user with id
+PATCH  http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email":"bbb@b.com"
+}
+
+### Get Current User
+GET  http://localhost:3000/auth/whoami
+Content-Type: application/json
+
+### Get Current User
+POST  http://localhost:3000/auth/signout
+Content-Type: application/json
+
+### Create Report
+POST http://localhost:3000/reports
+Content-type: application/json
+
+{
+    "make":"toyota",
+    "model":"corolla",
+    "year":1980,
+    "mileage":10000,
+    "lng":0,
+    "lat":0,
+    "price":50000
+    }
